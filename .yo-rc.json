@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.gr.cs",
+      "nativeLanguage": "zh-cn"
+    },
+    "jhipsterVersion": "4.5.2",
+    "baseName": "test09",
+    "packageName": "com.gr.cs",
+    "packageFolder": "com/gr/cs",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "jwtSecretKey": "71bda06a387fbd21f00b759ce56ad4131d3dc82c",
+    "clientFramework": "angular1",
+    "useSass": false,
+    "clientPackageManager": "yarn",
+    "applicationType": "monolith",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "zh-cn",
+    "languages": [
+      "zh-cn",
+      "en"
+    ]
+  }
+}
