@@ -1,0 +1,38 @@
+{
+  "fluentMethods": true,
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "relationshipName": "brand",
+      "otherEntityName": "brand",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "productCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "insertDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "lastUpdateDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20170913062749",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "product"
+}

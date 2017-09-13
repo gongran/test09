@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="test09App.brand.detail.title">Brand</span> {{vm.brand.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="test09App.brand.brandCode">Brand Code</span></dt>
+        <dd>
+            <span>{{vm.brand.brandCode}}</span>
+        </dd>
+        <dt><span data-translate="test09App.brand.brandName">Brand Name</span></dt>
+        <dd>
+            <span>{{vm.brand.brandName}}</span>
+        </dd>
+        <dt><span data-translate="test09App.brand.brandIntro">Brand Intro</span></dt>
+        <dd>
+            <span>{{vm.brand.brandIntro}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="brand-detail.edit({id:vm.brand.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

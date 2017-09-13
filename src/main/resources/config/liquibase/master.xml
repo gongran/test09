@@ -13,6 +13,8 @@
     <include file="classpath:config/liquibase/changelog/20170913025634_added_entity_Country.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170913025635_added_entity_Region.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170913025636_added_entity_Task.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170913062749_added_entity_Product.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170913062750_added_entity_Brand.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20170913025629_added_entity_constraints_JobHistory.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170913025630_added_entity_constraints_Job.xml" relativeToChangelogFile="false"/>
@@ -20,5 +22,6 @@
     <include file="classpath:config/liquibase/changelog/20170913025632_added_entity_constraints_Employee.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170913025633_added_entity_constraints_Location.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170913025634_added_entity_constraints_Country.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170913062749_added_entity_constraints_Product.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
