@@ -1,0 +1,89 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myJobHistoryLabel" data-translate="test09App.jobHistory.home.createOrEditLabel">Create or edit a Job History</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.jobHistory.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.jobHistory.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test09App.jobHistory.startDate" for="field_startDate">Start Date</label>
+                <div class="input-group">
+                    <input id="field_startDate" type="text" class="form-control" name="startDate" datetime-picker="{{dateformat}}" ng-model="vm.jobHistory.startDate" is-open="vm.datePickerOpenStatus.startDate"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.startDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.startDate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.startDate.$error.ZonedDateTimelocal" data-translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test09App.jobHistory.endDate" for="field_endDate">End Date</label>
+                <div class="input-group">
+                    <input id="field_endDate" type="text" class="form-control" name="endDate" datetime-picker="{{dateformat}}" ng-model="vm.jobHistory.endDate" is-open="vm.datePickerOpenStatus.endDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="test09App.jobHistory.job" for="field_job">Job</label>
+            <select class="form-control" id="field_job" name="job" ng-model="vm.jobHistory.job" ng-options="job as job.id for job in vm.jobs | orderBy:'id' track by job.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.job.$invalid">
+            <p class="help-block"
+                ng-show="editForm.job.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="test09App.jobHistory.department" for="field_department">Department</label>
+            <select class="form-control" id="field_department" name="department" ng-model="vm.jobHistory.department" ng-options="department as department.id for department in vm.departments | orderBy:'id' track by department.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.department.$invalid">
+            <p class="help-block"
+                ng-show="editForm.department.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="test09App.jobHistory.employee" for="field_employee">Employee</label>
+            <select class="form-control" id="field_employee" name="employee" ng-model="vm.jobHistory.employee" ng-options="employee as employee.id for employee in vm.employees | orderBy:'id' track by employee.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.employee.$invalid">
+            <p class="help-block"
+                ng-show="editForm.employee.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
