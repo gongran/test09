@@ -1,5 +1,5 @@
 <div>
-    <h2 data-translate="test09App.product.home.title">Products</h2>
+    <h2 data-translate="test09App.product.home.title">Products1</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
@@ -37,7 +37,7 @@
                     <td>{{product.insertDate | date:'medium'}}</td>
                     <td>{{product.lastUpdateDate | date:'medium'}}</td>
                     <td>
-                        <a ui-sref="brand-detail({id:product.brand.id})">{{product.brand.id}}</a>
+                        <a ui-sref="brand-detail({id:product.brand.id})">{{product.brand.brandName}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
