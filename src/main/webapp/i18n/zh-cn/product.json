@@ -2,7 +2,7 @@
     "test09App": {
         "product" : {
             "home": {
-                "title": "Products",
+                "title": "产品",
                 "createLabel": "Create a new Product",
                 "createOrEditLabel": "Create or edit a Product"
             },
