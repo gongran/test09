@@ -57,6 +57,7 @@ public class CacheConfiguration {
             cm.createCache(com.gr.cs.domain.Task.class.getName() + ".jobs", jcacheConfiguration);
             cm.createCache(com.gr.cs.domain.Product.class.getName(), jcacheConfiguration);
             cm.createCache(com.gr.cs.domain.Brand.class.getName(), jcacheConfiguration);
+            cm.createCache(com.gr.cs.domain.Customer.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
